@@ -71,10 +71,10 @@ public class Libro {
         }
         checksum %= 11;
         lastDigit = checksum < 10 ? String.valueOf(checksum) : "X";
-        return  isbn + lastDigit;
+        return isbn + lastDigit;
     }
 
-    public static Libro nuevoLibro(){
+    public static Libro nuevoLibro() {
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Introduce el titulo: ");
@@ -88,16 +88,17 @@ public class Libro {
         System.out.print("Introduce la cantidad: ");
         int stock = scan.nextInt();
 
-        return new Libro(titulo,autor,isbn,precio,stock);
+        return new Libro(titulo, autor, isbn, precio, stock);
     }
 
-    public void mostrarLibro(){
+    public void mostrarLibro() {
         System.out.println(toString());
     }
-    public boolean venderLibro(){
-        if (stock > 0){
+
+    public boolean venderLibro() {
+        if (stock > 0) {
             stock--;
-            System.out.println("Libro " + titulo + "vendido, queda" + ( (stock>1)? "n ":" " ) + stock);
+            System.out.println("Libro " + titulo + "vendido, queda" + ((stock > 1) ? "n " : " ") + stock);
             return true;
         }
         System.out.println("No tenemos ese libro en stock");
