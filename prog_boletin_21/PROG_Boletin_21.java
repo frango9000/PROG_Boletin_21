@@ -29,6 +29,8 @@ public class PROG_Boletin_21 {
         Libro libro3 = new Libro("Libro 3", "Autor 3", "178494987", 3.50f, 1);
         libreria.agregarLibro(libro1, libro2, libro3);
 
-        Menu.mostrarMenu();
+        while(true) {
+            libreria.menuActions(libreria.mostrarMenu());
+        }
     }
 }
