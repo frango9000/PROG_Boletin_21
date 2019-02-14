@@ -98,7 +98,7 @@ public class Libro {
     public boolean venderLibro() {
         if (stock > 0) {
             stock--;
-            System.out.println("Libro " + titulo + "vendido, queda" + ((stock > 1) ? "n " : " ") + stock);
+            System.out.println("Libro " + titulo + " vendido, queda" + ((stock == 1) ? " " : "n ") + stock);
             return true;
         }
         System.out.println("No tenemos ese libro en stock");
