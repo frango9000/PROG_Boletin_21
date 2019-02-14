@@ -56,7 +56,7 @@ public class Libreria {
             if(!isInteger(input))
                 continue;
             select=Integer.parseInt(input)-1;
-        }while(select<1 || select>opciones.length);
+        }while(select<0 || select>opciones.length);
         return select;
     }
 
