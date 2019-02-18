@@ -1,20 +1,19 @@
 package libreria;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Scanner;
 
 public class Libreria {
-    ArrayList<Libro> libreria = new ArrayList<>();
+    private ArrayList<Libro> libreria = new ArrayList<>();
 
     public void agregarLibro(Libro libro) {
         libreria.add(libro);
     }
 
     public void agregarLibro(Libro... libros) {
-        for (int i = 0; i < libros.length; i++) {
-            libreria.add(libros[i]);
-        }
+        libreria.addAll(Arrays.asList(libros));
     }
 
     public void mostrarInventario() {
